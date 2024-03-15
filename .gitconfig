@@ -1,0 +1,42 @@
+[user]
+  email = kelvin.stinghen@gmail.com
+  name = kelvinst
+[alias]
+  co = checkout
+  lg = log --all --graph --decorate --oneline --abbrev-commit
+  cm = commit
+  ac = !git add -A && git commit
+  aca = !git add -A && git commit --amend
+  acapf = !git add -A && git commit --amend -C HEAD~1 && git push -f
+  ace = !git add -A && git commit --allow-empty
+  r = !git pull --commit && git push
+  s = status -s
+  st = status -sb
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  d = diff
+  dt = difftool
+  pro = pull-request -o
+[push]
+  default = simple
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[core]
+  editor = nvim
+  excludesfile = ~/.global_gitignore
+[diff]
+  tool = nvim -d
+[merge]
+  tool = nvim -d
+[difftool]
+  prompt = false
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[gitsh]
+  defaultCommand = s
+[pull]
+  rebase = false
