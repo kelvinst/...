@@ -12,13 +12,13 @@ My new dotfiles
 ```
 brew install asdf
 
-asdf plugin-add elixir
-asdf install elixir latest
-asdf global elixir latest
-
 asdf plugin-add erlang
 asdf install erlang latest
 asdf global erlang latest
+
+asdf plugin-add elixir
+asdf install elixir latest
+asdf global elixir latest
 
 asdf plugin-add python
 asdf install python latest
